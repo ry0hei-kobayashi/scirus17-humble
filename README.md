@@ -1,5 +1,6 @@
 # Sciurus17-humble
 sciurus17 humbleをdockerで動かすためのリポジトリ
+本家:https://github.com/rt-net/sciurus17_ros
 
 ## 環境構築
 ```
