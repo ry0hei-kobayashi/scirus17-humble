@@ -1,0 +1,27 @@
+services:
+  sciurus-humble:
+    build:
+      context: ..
+      dockerfile: env_docker/Dockerfile
+    container_name: sciurus-humble
+    network_mode: "host"
+    environment:
+      - ROS_DOMAIN_ID=17
+      - ROS_LOCALHOST_ONLY=0
+      - RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+      - CYCLONEDDS_URI=file:///ros2_ws/cyclonedds_profile.xml
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /etc/udev/rules.d:/etc/udev/rules.d
+      - /dev:/dev
+    privileged: true
+    tty: true
+    stdin_open: true
+
+    # command: bash
+    command: ros2 launch sciurus17_gazebo sciurus17_with_table.launch.py use_sim_time:=true
+
+    # test_command -> ros2 launch sciurus17_examples example.launch.py example:='pick_and_place_right_arm_waist' use_sim_time:='true'
+
