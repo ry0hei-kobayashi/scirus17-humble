@@ -19,7 +19,10 @@ docker exec -it sciurus-humble bash
 ```
 
 ## 実機で開発する
-TODO
+udev_rulesを作成する(初回設定時のみ)
+```
+ros2 run sciurus17_tools create_udev_rules
+```
 
 ## simulatorで開発する
 
