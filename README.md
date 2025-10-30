@@ -38,3 +38,7 @@ ros2 launch sciurus17_example example.launch.py example:'pick_and_place_right_ar
 ```
 
 
+## ros2 packageを追加する
+additional_rospkgsフォルダ以下に追加のros2 packageを配置する
+
+DockerfileでCOPY, compoes.ymlでvolumeアタッチされるようになっているのでDocker内外で双方向に編集可能
