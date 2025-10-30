@@ -27,7 +27,7 @@ RUN cd /ros2_ws/src/ && git clone -b $ROS_DISTRO https://github.com/rt-net/sciur
 RUN apt update -y && rosdep update 
 RUN rosdep install -r -y -i --from-paths .
 
-COPY ./additional_rospkgs/ /ros2_ws/src/additional_rospkgs
+COPY ./additional_rospkgs/ /ros2_ws/src/additional_rospkgs/
 
 RUN cd /ros2_ws && \
     . /opt/ros/humble/setup.sh && \

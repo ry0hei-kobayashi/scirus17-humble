@@ -16,7 +16,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /etc/udev/rules.d:/etc/udev/rules.d
       - /dev:/dev
-      - ./additional_rospkgs:/ros2_ws/src/additional_rospkgs
+      - ../additional_rospkgs:/ros2_ws/src/additional_rospkgs
     privileged: true
     tty: true
     stdin_open: true
