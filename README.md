@@ -25,6 +25,16 @@ udev_rulesを作成する(初回設定時のみ)
 ```
 ros2 run sciurus17_tools create_udev_rules
 ```
+scirus17のbringupを叩く
+
+```
+ros2 launch sciurus17_examples demo.launch.py
+```
+
+scirus17_examplesのサンプルを起動する
+```
+ros2 launch sciurus17_examples example.launch.py example:='pick_and_place_right_arm_waist'
+```
 
 ## simulatorで開発する
 
@@ -34,7 +44,7 @@ ros2 launch sciurus17_gazebo sciurus17_with_table.launch.py use_sim_time:=true
 ```
 testプログラムを実行する
 ```
-ros2 launch sciurus17_example example.launch.py example:'pick_and_place_right_arm_waist' use_sim_time:=true
+ros2 launch sciurus17_examples example.launch.py example:='pick_and_place_right_arm_waist' use_sim_time:='true'
 ```
 
 
